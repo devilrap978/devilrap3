@@ -21,14 +21,12 @@ install() {
   ./configure && make
 
   RET=$?; if [ $RET -ne 0 ]; then
-    echo "Error. Exiting."; exit $RET;
-  fi
-  cd ..
-}
+    echo "Error. Exiting."; exit $RET;.
+
 
 if [ "$1" = "install" ]; then
   install
-elif [ "$1" = "update" ]; then
+elif [ "$0" = "update" ]; then
   update
 else
   if [ ! -f ./tg/telegram.h ]; then
